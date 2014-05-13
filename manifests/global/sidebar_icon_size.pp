@@ -13,8 +13,8 @@
 
 class osx::global::sidebar_icon_size($size = 1) {
   boxen::osx_defaults { 'sidebar icon size':
-	ensure => present,
 	domain => 'NSGlobalDomain',
+	type   => 'int',
 	key    => 'NSTableViewDefaultSizeMode',
 	value  => $size,
 	user   => $::boxen_user;
